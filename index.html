@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Juega a Piedra, Papel o Tijera en línea. ¡Elige tu opción y compite contra la computadora para ver quién gana!">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra, Papel o Tijera</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div>
+            <h1>
+                <span style="color: blue;">PIEDRA</span><br> 
+                <span style="color: red;">PAPEL</span> <br> 
+                <span style="color: purple;">TIJERA</span>
+            </h1>
+        </div>
+        <div id="score">
+            <span style="color: orange;">Victorias:</span>
+            <span style="color: yellow;" id="scoreValue">0</span>
+        </div>
+    </header>
+    <div class="choices">
+        <div class="juegu">
+            <div class="flex-2">
+                <button class="piedra" onclick="play('piedra')">
+                    <img src="piedra.png" alt="Piedra">
+                </button>
+                <button class="papel" onclick="play('papel')">
+                    <img src="papel.png" alt="Papel">
+                </button>
+            </div>
+            <div class="flex-1">
+                <button class="tijera" onclick="play('tijera')">
+                    <img src="tijera.png" alt="Tijera">
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="choicesDisplay" class="hidden">
+        <div id="userChoice" class="choice"></div>
+        <div class="gridi">
+            <div id="resultMessage"></div>
+            <center>
+                <button class="botin" onclick="restartGame()">Jugar de nuevo</button>
+            </center>
+        </div>
+        <div id="computerChoice" class="choice"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
